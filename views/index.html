@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h2 id="app_header" dir="rtl">وارد حساب كاربري خود شويد، يا حسابي را ايجاد كنيد.</h2>
+    <div class="container" id="container">
+        <div class="div-container sign-up-container">
+            <div class="div-form">
+                <h1>ساخت حساب</h1>
+                <span dir="rtl">حساب كاربري جديدي را ايجاد كنيد.</span>
+                <input type="text" id="su_name" maxlength="32" placeholder="نام و نام خانوادگي" />
+                <input type="text" id="su_username" maxlength="16" placeholder="نام كاربري" />
+                <input type="email" id="su_email" maxlength="32" placeholder="پست الكترونيكي" />
+                <input type="password" id="su_password" maxlength="32" placeholder="كلمه عبور" />
+                <input type="password" id="su_passwordverify" maxlength="32" placeholder="تكرار كلمه عبور" />
+                <button onclick="singup();">ثبت نام</button>
+            </div>
+        </div>
+        <div class="div-container sign-in-container">
+            <div class="div-form">
+                <h1>ورود به حساب</h1>
+                <span dir="rtl">اگر حسابي داريد، وارد شويد.</span>
+                <input id="si_username" type="text" maxlength="16" placeholder="نام كاربري" />
+                <input id="si_password" type="password" maxlength="32" placeholder="كلمه عبور" />
+                <a href="#" onclick="passrecover();">كلمه عبور خود را فراموش كرده ايد؟</a>
+                <button onclick="signin();">ورود به حساب</button>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>خوش آمديد</h1>
+                    <p dir="rtl">اگر قبلا ثبت نام كرده ايد و حساب كاربري داريد، وارد شويد.</p>
+                    <button class="ghost" id="signIn">ورود به حساب</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>عضو شويد</h1>
+                    <p dir="rtl">اگر هنوز حسابي نداريد، ثبت نام كنيد و وارد شويد.</p>
+                    <button class="ghost" id="signUp">ثبت نام</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dashboard" class="container2">
+        <div class="main-container">
+            <center>
+                <h1 dir="rtl">پنل كاربري</h1>
+                <span dir="rtl">شما وارد پنل كاربري شده ايد. در صورت نياز، خارج شويد</span>
+            </center>
+            <p dir="rtl">نام و نام خانوادگي: <input readonly type="text" id="dash_name" maxlength="32" placeholder="نام و نام خانوادگي" /></p>
+            <p dir="rtl">نام كاربري: <input readonly type="text" id="dash_username" maxlength="16" placeholder="نام كاربري" /></p>
+            <p dir="rtl">پست الكترونيكي<input readonly type="email" id="dash_email" maxlength="32" placeholder="پست الكترونيكي" /></p>
+            <p dir="rtl">كلمه عبور: <input readonly type="text" id="dash_password" maxlength="32" placeholder="كلمه عبور" /></p>
+            <button onclick="logout();">خروج از حساب</button>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer_info" dir="rtl">
+            ساخته شده توسط <i class="fa fa-heart "></i>
+            <a target="_blank " href="https://github.com/0xDeviI">آرمين آصفي</a> - براي مشاهده كد اصلي قالب تمرين
+            <a target="_blank " href="https://codepen.io/FlorinPop17/pen/vPKWjd ">اينجا</a> كليك كنيد.
+        </p>
+    </footer>
+    <script src="js/page.js "></script>
+    <script src="js/app.js "></script>
+</body>
+
+</html>
