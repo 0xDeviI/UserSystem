@@ -23,8 +23,7 @@ node app.js
 ```
 
 &nbsp;
-### Features ()
-new features added to version 1.7 Alpha
+### Features
 - signin
 - signout
 - recover pass
